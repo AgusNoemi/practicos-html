@@ -1,0 +1,6 @@
+/*Definir una CSS donde establezca que el tipo de letra es Verdana y tamano 8 en los parrafos. 
+Definir dos paginas que utilicen esa hoja de estilo de las cuales una debe redefinir el tamano de letra a 10.*/
+*{
+
+  font-family: Verdana;
+}
