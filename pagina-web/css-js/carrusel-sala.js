@@ -1,46 +1,31 @@
-window.onload = function () {
-  const Imagen = [
-    '../img/top1-sala.jpg',
-    '../img/top2-sala.jpg',
-    '../img/top3-sala.jpg',
-    '../img/top4-sala.jpg',
-    '../img/top5-sala.jpg',
-    '../img/top6-sala.jpg'
-  ];
-  
-  let posicionActual = 0;
-  let $botonAtras = document.querySelector('#Atras');
-  let $botonAdelante = document.querySelector('#Adelante');
-  let $imagen = document.querySelector('#imagen');
+imagenS = new Array;
+imagenS[0] = "../img/top1-sala.jpg";
+imagenS[1] = "../img/top2-sala.jpg";
+imagenS[2] = "../img/top3-sala.jpg";
+imagenS[3] = "../img/top4-sala.jpg";
+imagenS[4] = "../img/top5-sala.jpg";
+imagenS[5] = "../img/top6-sala.jpg";
 
+  let posicionActualS = 0;
+
+  function cambiarImagenS() {
+    document.imagesalados.src = imagenS[posicionActualS];
+  }
   //siguiente imagen
-  function pasarImagen() {
-    if(posicionActual >= Imagen.length - 1) {
-      posicionActual = 0;
+  function pasarImagenS() {
+    if(posicionActualS >= 5) {
+      posicionActualS = 0;
     }else{
-      posicionActual++;
+      posicionActualS++;
     }
-    cambiarImagen();
+    cambiarImagenS();
   }
-
   //anterior imagen
-  function volverImagen() {
-    if(posicionActual <= 0) {
-      posicionActual = Imagen.length - 1;
+  function volverImagenS() {
+    if(posicionActualS <= 0) {
+      posicionActualS = 5;
     }else{
-      posicionActual--;
+      posicionActualS--;
     }
-    cambiarImagen();
+    cambiarImagenS();
   }
-
-  //actualisar imagen
-  function cambiarImagen () {
-    $imagen.style.backgroundImage = `url(${Imagen[posicionActual]})`;
-  }
-
-  
-  $botonAdelante.addEventListener('click', pasarImagen);
-  $botonAtras.addEventListener('click', volverImagen);
-
-  cambiarImagen();
-} 

@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    
+  }
+  body{
+    background-image: url(../img/fondo-dulce.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /**/
+    display: flex;
+    min-height: 100vh;
+    min-width: 1200px;
+    flex-wrap: wrap;
+  }
+  header{
+    width: 100%;
+  }
+  main{
+    width: 1000px;
+    height: 1000px;
+    float: left;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+    background: rgb(247, 217, 248);
+    border-radius: 25px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.322);
+  }
